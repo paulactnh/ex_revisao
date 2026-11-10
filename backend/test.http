@@ -1,0 +1,56 @@
+### Cadastrar funcionario
+POST http://localhost:3000/funcionario
+Content-Type: application/json
+
+{
+    "nome": "Paula",
+    "email": "paula@gmail.com",
+    "senha": "abc"
+}
+
+
+### Cadastrar fornecedor
+POST http://localhost:3000/fornecedor
+Content-Type: application/json
+
+{
+    "nome": "Paula",
+    "cpf": "12345678912",
+    "cnpj": "114464668"
+}
+
+
+### Cadastrar produto
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+    "descricao": "Sapato",
+    "categoria": "moda",
+    "qtdeEstoque": 5,
+    "lote": "3300a",
+    "idFornecedor": 1
+}
+
+
+### Cadastrar movimento
+POST http://localhost:3000/movimento
+Content-Type: application/json
+
+{
+    "tipo": "ENTRADA",
+    "qtdeMovimento": 6,
+    "data": "2026-04-02",
+    "idProduto": 1
+}
+
+### Estoque insuficiente
+POST http://localhost:3000/movimento
+Content-Type: application/json
+
+{
+    "tipo": "SAIDA",
+    "qtdeMovimento": 100,
+    "data": "2026-10-02",
+    "idProduto": 1
+}
